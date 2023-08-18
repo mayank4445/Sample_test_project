@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Seed baskets
+(1..50).each do |i|
+  Basket.create!(
+    capacity: rand(2..27),
+    fill_rate: nil
+  )
+end

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  capacity: 1
+  fill_rate: MyString
+
+two:
+  capacity: 1
+  fill_rate: MyString

@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_17_191511) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_18_030832) do
   create_table "apples", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "basket_id", null: false
+    t.string "variety"
+    t.index ["basket_id"], name: "index_apples_on_basket_id"
+  end
+
+  create_table "baskets", force: :cascade do |t|
+    t.integer "capacity"
+    t.string "fill_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -21,4 +31,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_191511) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "apples", "baskets"
 end

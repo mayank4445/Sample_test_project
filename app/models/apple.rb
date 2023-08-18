@@ -1,3 +1,4 @@
 class Apple < ApplicationRecord
-  include Blending
+  # include Blending
+  belongs_to :basket
 end
